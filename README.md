@@ -25,3 +25,6 @@ Reports will contain:
   * Used Price
   * Best Price
 
+## Usage
+
+    ./script/choose_book.rb
