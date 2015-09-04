@@ -25,9 +25,9 @@ class AmazonWishList
   end
 
   def scan_wish_list
-    @username = config[:username] || username
-    @password = config[:password] || password
-    @wishlist_code = config[:wishlist_code] || wishlist_code
+    @username = config["username"] || username
+    @password = config["password"] || password
+    @wishlist_code = config["wishlist_code"] || wishlist_code
 
     @book_titles = []
 
