@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title %></title>
+</head>
+<body>
+<h1><%= @title %></h1>
+
+<table>
+  <tr>
+    <td><b>Date:</b></td><td><%= Time.now %></td>
+  <tr/>
+  <tr>
+    <td><b>Book Count:</b></td><td><%= @books.count %></td>
+  </tr>
+</table>
+
+<table border=1>
+  <tr>
+    <th>&nbsp;</th><th>Title</th><th>Author</th><th>Prime</th><th>In Stock</th><th>Rating</th><th>Amazon Price</th><th>Used Price</th><th>Best Price</th></best>
+  </tr>
+  <% @books.each do |book| %>
+  <tr>
+    <td><img width="<%= book.img_width %>" height="<%= book.img_height %>" src="<%= book.image_url %>"></img></td>
+    <td><a href="<%= book.url %>"><%= book.title %></a></td>
+    <td><%= book.author %></td>
+    <td><%= book.prime ? "Prime" : '' %></td>
+    <td><%= book.in_stock ? "In Stock" : "" %></td>
+    <td><%= book.rating %></td>
+    <td align="right">$<%= book.format_amazon_price %></td>
+    <td align="right">$<%= book.format_used_price %></td>
+    <td align="right">$<%= book.format_best_price %></td>
+  </tr>
+  <% end %>
+</table>
+
+</body>
+</html>
