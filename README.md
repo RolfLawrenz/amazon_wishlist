@@ -9,6 +9,9 @@ You enter your username, password and wishlist code and the script will generate
 ## Configuration
 Rather than enter your username, password or wishlist code each time you can enter those values in the **config.yml** file.
 
+Wishlist code can be found on your wishlist url:
+
+    http://www.amazon.com/gp/registry/wishlist/<wishlist_code>/ref=cm_wl_sortbar_o_page_
 
 ## Reports
 Reports will contain:
