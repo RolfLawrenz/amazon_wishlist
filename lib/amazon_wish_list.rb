@@ -76,7 +76,7 @@ class AmazonWishList
     usernm.set(@username)
     pwd = browser.text_field(:id, "ap_password")
     pwd.set(@password)
-    f = browser.form(:id , "ap_signin_form")
+    f = browser.form(:name , "signIn")
     f.submit
   end
 
