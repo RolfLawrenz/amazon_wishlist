@@ -107,7 +107,7 @@ class AmazonWishList
     # Finding <h5> tags - easier
     book_info_collection = page.css("h5")
     book_info_collection.each do |book_info|
-      link = book_info.css("a").select{|link| link["class"] == "a-link-normal"}[0]
+      link = book_info.css("a").select{|link| link["class"] == "a-link-normal a-declarative"}[0]
       next unless link
 
       #title
